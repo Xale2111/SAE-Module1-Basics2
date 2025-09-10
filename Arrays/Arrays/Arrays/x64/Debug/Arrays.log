@@ -1,2 +1,3 @@
 ﻿  Arrays.cpp
+D:\00-Cours_SAE\1er-Annee\01-Projets\Module 01\C++\Basics-2\Arrays\Arrays\Arrays\Arrays.cpp(75,21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Arrays.vcxproj -> D:\00-Cours_SAE\1er-Annee\01-Projets\Module 01\C++\Basics-2\Arrays\Arrays\x64\Debug\Arrays.exe
