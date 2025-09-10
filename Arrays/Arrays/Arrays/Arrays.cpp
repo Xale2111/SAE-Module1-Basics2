@@ -18,6 +18,84 @@
 using std::cout;
 using std::cin;
 
+void InitAndDisplayTable(int tableSize);
+
+
+int main()
+{
+	int userInput;
+	do
+	{
+		cout << "Enter a number between 1 and 12 to have the multiplication table of it : ";
+		cin >> userInput;
+	} while (userInput < 1 || userInput > 12);
+
+	InitAndDisplayTable(userInput);
+}
+
+void InitAndDisplayTable(int tableSize)
+{
+	const int DefinedTableSize = 13;
+
+	int tableArray[DefinedTableSize][DefinedTableSize];
+
+	for (int i = 1; i < DefinedTableSize; ++i)
+	{
+		for (int j = 1; j < DefinedTableSize; ++j)
+		{
+			tableArray[i][j] = i * j;
+		}
+	}
+
+	for (int i = 1; i < DefinedTableSize; ++i)
+	{
+		for (int j = 1; j < DefinedTableSize; ++j)
+		{
+			cout << tableArray[i][j];
+			cout << " | ";
+		}
+		cout << "\n";
+
+	}
+
+}
+
+
+
+
+//
+//FIRST EXERCICE
+//
+
+/*const int arraySize = 5;
+
+int ReturnHighestNumberInArray(int intArray[]);
+
+int main()
+{
+	int numberArray[arraySize];
+	std::cout << "Enter 5 numbers !";
+
+	for (int i = 0; i < arraySize; ++i)
+	{
+		cout << "\nNumber " << i + 1 << " : ";
+		cin >> numberArray[i];
+	}
+	cout << "\nHighest number in the list is : ";
+	cout << ReturnHighestNumberInArray(numberArray);
+}
+
+int ReturnHighestNumberInArray(int intArray[])
+{
+	std::sort(intArray, intArray + arraySize, std::greater<int>());
+	return intArray[0];
+}*/
+
+//
+//SECOND EXERCICE
+//
+
+/*
 const int arraySize = 10;
 void InitRandomArray();
 bool CheckIfNumberIsInArrayWithForLoop(int userNumber);
@@ -97,7 +175,7 @@ bool CheckIfNumberIsInArrayWithForLoop(int userNumber)
 
 bool CheckIfNumberIsInArrayWithFind(int userNumber)
 {
-	if (std::any_of(std::begin(randomNumberArray), std::end(randomNumberArray), [=](int n) {return n == userNumber; })) 
+	if (std::any_of(std::begin(randomNumberArray), std::end(randomNumberArray), [=](int n) {return n == userNumber; }))
 	{
 		return true;
 	}
@@ -106,34 +184,6 @@ bool CheckIfNumberIsInArrayWithFind(int userNumber)
 		return false;
 	}
 }
-
-
-//
-//FIRST EXERCICE
-//
-
-/*const int arraySize = 5;
-
-int ReturnHighestNumberInArray(int intArray[]);
-
-int main()
-{
-	int numberArray[arraySize];
-	std::cout << "Enter 5 numbers !";
-
-	for (int i = 0; i < arraySize; ++i)
-	{
-		cout << "\nNumber " << i + 1 << " : ";
-		cin >> numberArray[i];
-	}
-	cout << "\nHighest number in the list is : ";
-	cout << ReturnHighestNumberInArray(numberArray);
-}
-
-int ReturnHighestNumberInArray(int intArray[])
-{
-	std::sort(intArray, intArray + arraySize, std::greater<int>());
-	return intArray[0];
-}*/
+*/
 
 
